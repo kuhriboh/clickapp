@@ -9,7 +9,31 @@ let pokemonRepository = (function() {
     {name: 'Dragonite', height:87.6, types: ['Dragon', 'Flying'] },
     {name: 'Piplup', height:16.8, types: 'Water' }
 
-  ];
+  ]
+
+  let pokemon = [
+    {name: 'Garchmop', height:75.6 },
+    {name: 'Celebi', height:24, },
+    {name: 'Mew', height:16.8, },
+    {name: 'Blaziken', height:75.6,},
+    {name: 'Lugia', height:205.2, },
+    {name: 'Dragonite', height:87.6 },
+    {name: 'Piplup', height:16.8}
+    ];
+
+      pokemon.forEach(function(pokemon) {
+  console.log(pokemon.name + ' is ' + pokemon.types + ' pokemon.');
+});
+
+  for (let i=0; i < pokemon.height; i++){
+    if (pokemon.height >30){
+      console.log(pokeomon.height + " is average sized! ");
+    }else if (pokemon.height <30){
+      console.log(pokeomon.height + " is tiny! ");
+    }else {
+      console.log(pokeomon.height + " is huge! ");
+    }
+  }
     // Functions Add Item And Buttons to Pokedex
     function addListItem(pokemon){
       let list = document.querySelector('.pokemon-list');
