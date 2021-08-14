@@ -11,6 +11,10 @@ let pokemonRepository = (function() {
 
   ]
 
+        pokemonList.forEach(function(pokemonList) {
+  document.write(pokemonList.name + ' is a ' + pokemonList.types + ' type pokemon.' +'<br>');
+});
+
   let pokemon = [
     {name: 'Garchmop', height:75.6 },
     {name: 'Celebi', height:24, },
@@ -21,19 +25,14 @@ let pokemonRepository = (function() {
     {name: 'Piplup', height:16.8}
     ];
 
-      pokemon.forEach(function(pokemon) {
-  console.log(pokemon.name + ' is ' + pokemon.types + ' pokemon.');
-});
-
-  for (let i=0; i < pokemon.height; i++){
-    if (pokemon.height >30){
-      console.log(pokeomon.height + " is average sized! ");
-    }else if (pokemon.height <30){
-      console.log(pokeomon.height + " is tiny! ");
-    }else {
-      console.log(pokeomon.height + " is huge! ");
+  for (let i=0; i<205.6; i++){
+    if (pokemon[i].height >50 && pokemon[i].height >30){
+      document.write(pokemon[i].name + pokemon[i].height + ' is huge! ' + '<br>');
+    }else if (pokemon[i].height <30){
+      document.write(pokemon[i].name + pokemon[i].height + ' is tiny! ' + '<br>');
     }
   }
+
     // Functions Add Item And Buttons to Pokedex
     function addListItem(pokemon){
       let list = document.querySelector('.pokemon-list');
@@ -70,7 +69,7 @@ let pokemonRepository = (function() {
       removeLast:removeLast,
       addListItem: addListItem
     };
-}) ();
+})();
 
 pokemonRepository.getAll().forEach(function(pokemon){
 pokemonRepository.addListItem(pokemon);
