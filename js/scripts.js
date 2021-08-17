@@ -22,7 +22,7 @@ let pokemonRepository = (function() {
       button.classList.add('fancyButton');
       listItem.appendChild(button);
       list.appendChild(listItem);
-      button.addEventListener('click', function(event){
+      button.addEventListener('click', function(pokemont){
         showDetails(pokemon);
       });
     }
