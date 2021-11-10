@@ -45,7 +45,7 @@ let pokemonRepository = (function() {
         pokeType.innerHTML = 'Type: ' + pokemon.types.toUpperCase();
         pokeImage.src = pokemon.imageUrl;
         modalClose.innerHTML = "Close";
-        showModal();
+        showModal(pokemon);
       });
     }
 
