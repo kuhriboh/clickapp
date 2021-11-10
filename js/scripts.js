@@ -29,7 +29,10 @@ let pokemonRepository = (function() {
       button.innerText = pokemon.name.toUpperCase();
       button.classList.add('fancyButton');
       listItem.classList.add('group-list-item');
-      list.appendChild(listItem);
+      button.setAttribute('data-toggle','modal')
+      button.setAttribute('data-target','#targetModal')
+      listItem.appendChild(button)
+      list.appendChild(listItem)
       button.addEventListener('click', function(pokemont){
         showDetails(pokemon);
       });
